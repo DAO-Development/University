@@ -1,10 +1,5 @@
-# DAO-development
-frontend сайта dao
+# Center of Eurasion Education
+frontend сайта
 
 ## Стек технологий
 gulp + sass + ...
-
-## Задача
-### pagespeed:
-мобилка: 80,
-десткоп: 90
