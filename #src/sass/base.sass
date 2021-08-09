@@ -13,12 +13,16 @@ $white: rgba(255, 255, 255, 1)
 $yellow: rgba(236, 214, 100, 1)
 $blue: rgba(57, 106, 190, 1)
 $black: rgba(0, 0, 0, 1)
+$shadow: 0px 10px 20px rgba(0, 0, 0, 0.15)
+$shadow-main: 0px 0px 20px rgba(0, 0, 0, 0.15)
+
 
 @font-face
     font-family: "FuturaMediumC"
     src: url("../fonts/futuramediumc.otf") format("otf")
     font-weight: normal
     font-style: normal
+
 @font-face
     font-family: "FuturaBookC"
     src: url("../fonts/futurabookc.otf") format("otf")
@@ -30,8 +34,10 @@ body
     margin: 0
 
 .container
-    width: 1318px
+    width: 1480px
     margin: 0 auto
+    @media screen and (max-width: $desktopS)
+        width: 1240px
     @media screen and (max-width: $tabletM)
         width: 90vw
     @media screen and (max-width: $mobileL)
@@ -57,7 +63,7 @@ h2
         line-height: 55px
 
 h3, h4, h5, h6
-    font-family: 'FuturaBookC', serif
+    font-family: 'FuturaBookC', sans-serif
     margin: 0
 
 h3
@@ -67,23 +73,32 @@ h3
 //p
 //    margin: 0
 //
-//a
-//    color: $black
-//    text-decoration: none
-//
-//    &:hover
-//        text-decoration: underline
-//        cursor: pointer
-//
-//button, .btn
-//    font-family: 'FuturaBookC', serif
-//    color: $white
-//    border: none
-//    border-radius: 40px
-//    background-image: $button-gradient
-//    background-size: 100% 100%
-//    transition: background-size 0.4s
-//
-//    &:hover
-//        cursor: pointer
-//        background-size: 300% 100%
+a
+    font-family: 'FuturaBookC', sans-serif
+    color: $white
+    text-decoration: none
+
+    &:hover
+        text-decoration: underline
+        cursor: pointer
+
+button, .btn
+    box-sizing: border-box
+    font-family: 'FuturaBookC', sans-serif
+    border: none
+    border-radius: 20px
+    transition: 0.3s ease-out
+
+    &:hover
+        cursor: pointer
+        color: $blue
+        background-color: $white
+        border: 1px solid $blue
+
+.blue-btn
+    color: $white
+    background-color: $blue
+
+.yellow-btn
+    color: $blue
+    background-color: $yellow
