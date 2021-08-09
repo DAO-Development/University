@@ -1,0 +1,89 @@
+/* Экраны */
+$mobileS: 360px
+$mobileM: 414px
+$mobileL: 568px
+$tabletS: 768px
+$tabletM: 1024px
+$desktopS: 1440px
+$desktopM: 1600px
+$desktopL: 1920px
+
+/* Цвета */
+$white: rgba(255, 255, 255, 1)
+$yellow: rgba(236, 214, 100, 1)
+$blue: rgba(57, 106, 190, 1)
+$black: rgba(0, 0, 0, 1)
+
+@font-face
+    font-family: "FuturaMediumC"
+    src: url("../fonts/futuramediumc.otf") format("otf")
+    font-weight: normal
+    font-style: normal
+@font-face
+    font-family: "FuturaBookC"
+    src: url("../fonts/futurabookc.otf") format("otf")
+    font-weight: normal
+    font-style: normal
+
+body
+    font-family: FuturaBookC, sans-serif
+    margin: 0
+
+.container
+    width: 1318px
+    margin: 0 auto
+    @media screen and (max-width: $tabletM)
+        width: 90vw
+    @media screen and (max-width: $mobileL)
+        width: 100vw
+
+div
+    box-sizing: border-box
+
+h1, h2
+    font-family: 'FuturaMediumC', sans-serif
+    margin: 0
+
+h1
+    font-size: 72px
+    line-height: 84px
+
+h2
+    font-size: 64px
+    line-height: 74px
+    font-weight: 500
+    @media screen and (max-width: $desktopS)
+        font-size: 48px
+        line-height: 55px
+
+h3, h4, h5, h6
+    font-family: 'FuturaBookC', serif
+    margin: 0
+
+h3
+    font-size: 48px
+    line-height: 54px
+
+//p
+//    margin: 0
+//
+//a
+//    color: $black
+//    text-decoration: none
+//
+//    &:hover
+//        text-decoration: underline
+//        cursor: pointer
+//
+//button, .btn
+//    font-family: 'FuturaBookC', serif
+//    color: $white
+//    border: none
+//    border-radius: 40px
+//    background-image: $button-gradient
+//    background-size: 100% 100%
+//    transition: background-size 0.4s
+//
+//    &:hover
+//        cursor: pointer
+//        background-size: 300% 100%
