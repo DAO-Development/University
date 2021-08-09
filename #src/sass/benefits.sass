@@ -1,0 +1,36 @@
+@import "base"
+
+.benefits
+    padding: 110px 0
+    background-image: url("../img/main-bg.png")
+    background-position: center
+    background-size: cover
+
+    .container
+        padding: 60px 50px
+        width: 1540px
+        background-color: $black-opacity
+        backdrop-filter: blur(20px)
+        -webkit-backdrop-filter: blur(20px)
+        border-radius: 20px
+
+    &__list
+        &-desktop
+            display: flex
+            flex-direction: column
+            flex-wrap: wrap
+            gap: 40px
+            //max-height: 610px
+            max-height: 650px
+            font-size: 36px
+            line-height: 41px
+            color: $white
+            list-style-image: url("../img/list-img.png")
+
+            li
+                max-width: 654px
+                //max-width: 680px
+                padding-inline-start: 30px
+
+            @media screen and (max-width: $tabletM)
+                display: none
