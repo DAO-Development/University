@@ -1,0 +1,67 @@
+@import "base"
+
+.specialities
+    &__content
+        display: grid
+        grid-template-columns: 1fr 1fr
+        grid-gap: 30px
+        margin-bottom: 70px
+
+    &__card
+        padding: 40px 92px 40px 123px
+        background-color: $white
+        box-shadow: $shadow-main
+        border-radius: 20px
+        color: $blue
+
+        h3
+            margin-bottom: 30px
+
+        ul
+            list-style-image: url("../img/blue-list.png")
+
+            li
+                padding-inline-start: 20px
+                font-size: 36px
+                line-height: 150%
+
+        a
+            margin-top: 30px
+            font-size: 24px
+            line-height: 27px
+            color: $blue
+            text-decoration: underline
+
+            &:hover
+                text-decoration: none
+
+    &__ask
+        position: relative
+        display: flex
+        align-items: center
+        margin-left: auto
+        margin-right: 0
+        width: fit-content
+        background: $white
+        border: 4px solid $blue
+        border-radius: 60px
+
+        &.hidden
+            border: none
+
+            .specialities__ask--text
+                padding: 0
+                width: 0
+                color: transparent
+
+        svg
+            position: relative
+            top: 0
+            right: 0
+
+        &--text
+            display: inline-block
+            padding: 0 42px 0 70px
+            font-size: 48px
+            line-height: 54px
+            color: $blue
