@@ -1,2 +1,53 @@
 @import "base"
 
+.footer
+    padding: 100px 0
+    background-color: $blue
+    color: $white
+
+    .container
+        display: flex
+        justify-content: space-between
+
+    &__left
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+
+        img
+            width: 313px
+            height: auto
+
+    &__right
+        display: flex
+        font-size: 36px
+        line-height: 41px
+
+    &__location
+        margin-right: 98px
+
+        .location
+            &-address
+                margin-bottom: 40px
+
+                &__title
+                    text-decoration: underline
+
+    &__contacts
+        ul
+            list-style: none
+            display: flex
+            flex-direction: column
+            gap: 20px
+
+        .contacts__inst
+            a
+                display: flex
+                align-items: center
+
+                svg
+                    margin-right: 10px
+
+
+
+
