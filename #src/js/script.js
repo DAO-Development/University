@@ -76,11 +76,22 @@ $(document).ready(function () {
     });
 
     /**
-     * Определение слайдера цены
+     * Определение слайдера цен
      */
     $('.price-slider').slick({
         variableWidth: false,
         variableHeight: false,
+        slidesToShow: 3,
+        arrows: true,
+        prevArrow: '<div class="arrow-prev arrow"></div>',
+        nextArrow: '<div class="arrow-next arrow"></div>',
+        infinite: false
+    })
+
+    /**
+     * Определение слайдера преподавателей
+     */
+    $('.teachers-slider').slick({
         slidesToShow: 3,
         arrows: true,
         prevArrow: '<div class="arrow-prev arrow"></div>',

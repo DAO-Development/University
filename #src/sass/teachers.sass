@@ -1,0 +1,40 @@
+@import "base"
+
+.teachers
+    &-slider
+        & .arrow
+            position: absolute
+            top: 40%
+            width: 70px
+            height: 140px
+            background-size: cover
+
+            &-prev
+                left: -170px
+                background-image: url("../img/prev-arrow-big.png")
+
+            &-next
+                right: -170px
+                background-image: url("../img/next-arrow-big.png")
+
+    &__card
+        padding: 35px 35px 40px
+        max-width: 460px
+        background-color: $white
+        border-radius: 20px
+        color: $blue
+
+        h4
+            margin-bottom: 10px
+
+        .card
+            &__image
+                margin-bottom: 20px
+                width: 390px
+                height: 594px
+                overflow: hidden
+                border-radius: 20px
+
+                img
+                    width: 100%
+                    height: auto
