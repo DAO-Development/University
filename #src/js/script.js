@@ -100,6 +100,21 @@ $(document).ready(function () {
     })
 
     /**
+     * Определение кнопок в блоке документов
+     */
+    let btnArrows = $(".documents-item__head--btn")
+    let docs = $(".documents-item")
+
+    for (let i = 0; i < btnArrows.length; i++) {
+        btnArrows[i].addEventListener("click", function () {
+            if (docs[i].classList.contains("close"))
+                docs[i].classList.remove("close")
+            else
+                docs[i].classList.add("close")
+        })
+    }
+
+    /**
      * Форма для заявки
      */
     // $('.btn').on("click", function () {

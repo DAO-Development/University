@@ -1,0 +1,48 @@
+@import "base"
+
+.documents
+    &__content
+        margin-bottom: 70px
+
+    &-item
+        margin-bottom: 50px
+        border: 5px solid $blue
+        border-radius: 20px
+        overflow: hidden
+
+        &.close
+            .documents-item__head--btn
+                transform: none
+
+            .documents-item__list
+                height: 0
+                padding: 0 123px
+
+        &__head
+            display: flex
+            align-items: center
+            justify-content: space-between
+            padding: 35px 123px
+            font-size: 48px
+            line-height: 110%
+            color: $white
+            background-color: $blue
+
+            &--btn
+                transform: rotate(90deg)
+                transition: 0.3s ease-in-out
+
+        &__list
+            padding: 60px 123px 70px
+            height: 559px
+            font-size: 36px
+            line-height: 150%
+            transition: all 0.5s ease-in-out
+
+            ol
+                margin: 0
+
+    .btn
+        padding: 42px 212px
+        font-size: 48px
+        line-height: 130%
