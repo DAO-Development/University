@@ -42,16 +42,6 @@ $(document).ready(function () {
     //     $('.header__menu').removeClass('width')
     // })
 
-
-    /**
-     * Кнопка с вопросом
-     */
-    $(".specialities__ask").hover(function () {
-        $(".specialities__ask").removeClass("hidden")
-    }, function () {
-        $(".specialities__ask").addClass("hidden")
-    })
-
     /**
      * Определение слайдера выпускников
      */
@@ -100,6 +90,15 @@ $(document).ready(function () {
     })
 
     /**
+     * Кнопка с вопросом
+     */
+    $(".specialities__ask").hover(function () {
+        $(".specialities__ask").removeClass("hidden")
+    }, function () {
+        $(".specialities__ask").addClass("hidden")
+    })
+
+    /**
      * Определение кнопок в блоке документов
      */
     let btnArrows = $(".documents-item__head--btn")
@@ -111,6 +110,21 @@ $(document).ready(function () {
                 docs[i].classList.remove("close")
             else
                 docs[i].classList.add("close")
+        })
+    }
+
+    /**
+     * Показать больше в специальностях
+     */
+    let showMore = $(".specialities__card-more")
+    let cardsMore = $(".specialities__card-with-more")
+
+    for (let i = 0; i < showMore.length; i++) {
+        showMore[i].addEventListener("click", function () {
+            if (cardsMore[i].classList.contains("show"))
+                cardsMore[i].classList.remove("show")
+            else
+                cardsMore[i].classList.add("show")
         })
     }
 
