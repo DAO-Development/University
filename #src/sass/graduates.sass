@@ -1,3 +1,86 @@
 @import "base"
 
 .graduates
+
+    &__content
+        position: relative
+        padding: 102px 0
+
+    &__review-slider
+        z-index: 15
+        max-width: 55%
+
+        .review
+            &__card
+                padding: 55px 122px
+                background: $white
+                box-shadow: $shadow
+                border-radius: 20px
+
+                h4
+                    color: $blue
+
+            &__text
+                margin-bottom: 50px
+                font-size: 24px
+                line-height: 120%
+
+            &__info
+                display: flex
+                flex-wrap: wrap
+                gap: 20px
+                font-size: 18px
+                line-height: 20px
+
+        .arrow
+            z-index: 30
+            position: absolute
+            bottom: 55px
+            width: 50px
+            height: 50px
+            background-size: cover
+            transition: 0.3s ease-in-out
+
+            &-prev
+                right: 192px
+                background-image: url("../img/prev-arrow-active.png")
+
+                &.slick-disabled
+                    background-image: url("../img/prev-arrow.png")
+
+            &-next
+                right: 122px
+                background-image: url("../img/next-arrow-active.png")
+
+                &.slick-disabled
+                    background-image: url("../img/next-arrow.png")
+
+
+    &__photos-slider
+        z-index: 10
+        position: absolute
+        top: 0
+        right: 0
+        max-width: 50%
+
+        & .slick-track
+            display: flex
+            align-items: center
+            gap: 30px
+
+    &__photos--slide
+        & .photos__image
+            width: 404px
+            height: 546px
+            overflow: hidden
+            border-radius: 20px
+            transition: 0.3s ease-in-out
+
+            img
+                width: 100%
+                height: auto
+
+        &.slick-current
+            & .photos__image
+                width: 460px
+                height: 641px

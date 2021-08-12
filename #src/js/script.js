@@ -42,49 +42,39 @@ $(document).ready(function () {
     //     $('.header__menu').removeClass('width')
     // })
 
+
     /**
-     * Определение слайдеров
+     * Кнопка с вопросом
      */
-    // if ($(window).width() <= '768') {
-    //     $('.works__slider').slick({
-    //         variableWidth: true,
-    //         slidesToShow: 1,
-    //         arrows: false,
-    //         dots: true,
-    //         centerMode: true,
-    //         centerPadding: '40px'
-    //     });
-    // } else if ($(window).width() > '768') {
-    //     $('.works__slider').slick({
-    //         variableWidth: false,
-    //         dots: true,
-    //         arrows: false,
-    //         infinite: false,
-    //         slidesToShow: 3,
-    //     });
-    // }
-    //
-    // if ($(window).width() <= '568') {
-    //     $('.reviews__slider').slick({
-    //         variableWidth: false,
-    //         arrows: true,
-    //         prevArrow: '<div class="arrow-prev arrow"><img src="../img/arrow-prev.png"></div>',
-    //         nextArrow: '<div class="arrow-next arrow"><img src="../img/arrow-next.png"></div>',
-    //         dots: false,
-    //         infinite: false,
-    //         slidesToShow: 1,
-    //     });
-    // } else if ($(window).width() <= '768') {
-    //     $('.reviews__slider').slick({
-    //         variableWidth: false,
-    //         arrows: true,
-    //         prevArrow: '<div class="arrow-prev arrow"><img src="../img/arrow-prev.png"></div>',
-    //         nextArrow: '<div class="arrow-next arrow"><img src="../img/arrow-next.png"></div>',
-    //         dots: false,
-    //         infinite: false,
-    //         slidesToShow: 2,
-    //     });
-    // }
+    $(".specialities__ask").hover(function () {
+        $(".specialities__ask").removeClass("hidden")
+    }, function () {
+        $(".specialities__ask").addClass("hidden")
+    })
+
+    /**
+     * Определение слайдера выпускников
+     */
+    $('.graduates__photos-slider').slick({
+        variableWidth: true,
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        arrows: false,
+        dots: false,
+        asNavFor: '.graduates__review-slider',
+        infinite: false
+    });
+    $('.graduates__review-slider').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        asNavFor: '.graduates__photos-slider',
+        arrows: true,
+        prevArrow: '<div class="arrow-prev arrow"></div>',
+        nextArrow: '<div class="arrow-next arrow"></div>',
+        centerMode: false,
+        // focusOnSelect: true
+        infinite: false
+    });
 
     /**
      * Форма для заявки
