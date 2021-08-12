@@ -72,9 +72,21 @@ $(document).ready(function () {
         prevArrow: '<div class="arrow-prev arrow"></div>',
         nextArrow: '<div class="arrow-next arrow"></div>',
         centerMode: false,
-        // focusOnSelect: true
         infinite: false
     });
+
+    /**
+     * Определение слайдера цены
+     */
+    $('.price-slider').slick({
+        variableWidth: false,
+        variableHeight: false,
+        slidesToShow: 3,
+        arrows: true,
+        prevArrow: '<div class="arrow-prev arrow"></div>',
+        nextArrow: '<div class="arrow-next arrow"></div>',
+        infinite: false
+    })
 
     /**
      * Форма для заявки

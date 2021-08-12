@@ -1,0 +1,71 @@
+@import "base"
+
+.price
+    &-slider
+        & .arrow
+            position: absolute
+            top: 40%
+            width: 70px
+            height: 140px
+            background-size: cover
+
+            &-prev
+                left: -100px
+                background-image: url("../img/prev-arrow-big.png")
+
+            &-next
+                right: -100px
+                background-image: url("../img/next-arrow-big.png")
+
+
+    &__card
+        padding: 50px 53px
+        max-width: 460px
+        background: $white
+        box-shadow: $shadow-main
+        border-radius: 20px
+        text-align: center
+        color: $blue
+
+        .card
+            &__info
+                margin-bottom: 50px
+
+                &-item
+                    margin-bottom: 40px
+
+                &-title
+                    margin-bottom: 10px
+
+                &-text
+                    font-size: 36px
+                    line-height: 41px
+
+            &__special
+                font-size: 36px
+                line-height: 41px
+                text-decoration: underline
+
+                &:hover
+                    text-decoration: none
+                    cursor: pointer
+
+            &__bottom
+                padding: 40px 0
+                border-top: 1px solid rgba(0, 0, 0, 0.3)
+
+                &-title
+                    margin-bottom: 20px
+
+                &-price-old
+                    margin-bottom: 10px
+                    text-decoration: line-through
+
+                &-price
+                    font-size: 64px
+                    line-height: 72px
+
+        .btn
+            padding: 17px 50px
+            font-size: 36px
+            line-height: 41px
