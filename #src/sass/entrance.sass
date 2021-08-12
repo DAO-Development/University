@@ -1,0 +1,50 @@
+@import "base"
+
+.entrance
+    &__content
+        display: grid
+        grid-template-columns: 1fr 1fr
+        grid-column-gap: 122px
+        grid-row-gap: 87px
+
+    &-item
+        padding-right: 30px
+        padding-bottom: 20px
+
+        &:nth-child(2n-1)
+            border-right: 2px solid $blue
+
+        &__number
+            display: flex
+            align-items: center
+            justify-content: center
+            margin-bottom: 40px
+            width: 70px
+            height: 70px
+            font-weight: 500
+            font-size: 48px
+            line-height: 55px
+            color: $white
+            background-color: $blue
+            border-radius: 50%
+
+        h3
+            margin-bottom: 30px
+
+        &--disabled
+            border-right: none !important
+
+            h3
+                text-decoration: line-through
+
+        &__text
+            font-size: 36px
+            line-height: 41px
+
+    &__card
+        margin-left: -122px
+        max-height: 240px
+        padding: 65px 100px
+        background: $white
+        box-shadow: $shadow-main
+        border-radius: 20px
