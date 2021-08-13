@@ -6,9 +6,14 @@
         position: relative
         padding: 102px 0
 
+        @media screen and (max-width: $desktopS)
+            padding: 90px 0
+
     &__review-slider
         z-index: 15
         max-width: 55%
+        @media screen and (max-width: $desktopS)
+            max-width: 60%
 
         .review
             &__card
@@ -16,14 +21,17 @@
                 background: $white
                 box-shadow: $shadow
                 border-radius: 20px
+                @media screen and (max-width: $desktopS)
+                    padding: 66px 99px
 
                 h4
                     color: $blue
 
             &__text
                 margin-bottom: 50px
-                font-size: 24px
-                line-height: 120%
+                @media screen and (max-width: $desktopS)
+                    margin-bottom: 20px
+                    font-size: 18px
 
             &__info
                 display: flex
@@ -31,6 +39,10 @@
                 gap: 20px
                 font-size: 18px
                 line-height: 20px
+                @media screen and (max-width: $desktopS)
+                    max-width: 185px
+                    gap: 10px
+                    font-size: 16px
 
         .arrow
             z-index: 30
@@ -70,11 +82,16 @@
 
     &__photos--slide
         & .photos__image
+            display: grid
+            place-content: center
             width: 404px
             height: 546px
             overflow: hidden
             border-radius: 20px
             transition: 0.3s ease-in-out
+            @media screen and (max-width: $desktopS)
+                width: 330px
+                height: 446px
 
             img
                 width: 100%
@@ -84,3 +101,6 @@
             & .photos__image
                 width: 460px
                 height: 641px
+                @media screen and (max-width: $desktopS)
+                    width: 446px
+                    height: 580px

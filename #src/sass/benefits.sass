@@ -13,24 +13,34 @@
         backdrop-filter: blur(20px)
         -webkit-backdrop-filter: blur(20px)
         border-radius: 20px
+        @media screen and (max-width: $desktopS)
+            padding: 80px 50px
+            width: 1240px
+        @media screen and (max-width: $tabletM)
+            width: 90vw
+        @media screen and (max-width: $mobileL)
+            width: 100vw
 
     &__list
         &-desktop
             display: flex
             flex-direction: column
             flex-wrap: wrap
-            gap: 40px
-            //max-height: 610px
+            gap: 40px 60px
             max-height: 650px
             font-size: 32px
             line-height: 130%
             color: $white
             list-style-image: url("../img/yellow-list.png")
+            @media (max-width: $desktopS)
+                font-size: 26px
+                max-height: 570px
 
             li
-                max-width: 654px
-                //max-width: 680px
+                max-width: 610px
                 padding-inline-start: 30px
+                @media (max-width: $desktopS)
+                    max-width: 515px
 
             @media screen and (max-width: $tabletM)
                 display: none
