@@ -2,6 +2,9 @@
 
 .price
     &-slider
+        .slick-list
+            overflow: visible !important
+
         & .arrow
             position: absolute
             top: 40%
@@ -10,15 +13,16 @@
             background-size: cover
 
             &-prev
-                left: -170px
-                background-image: url("../img/prev-arrow-big.png")
-
-            &-next
                 right: -170px
                 background-image: url("../img/next-arrow-big.png")
 
+            &-next
+                left: -170px
+                background-image: url("../img/prev-arrow-big.png")
+
 
     &__card
+        position: relative
         padding: 50px 53px
         max-width: 460px
         background: $white
@@ -26,10 +30,24 @@
         border-radius: 20px
         text-align: center
         color: $blue
+        z-index: 200
+
+        &:hover
+            transform: scale(1.1)
+
+            .btn
+                background-color: $yellow
+                color: $blue
+
+                &:hover
+                    background-color: $white
+
+            .card__special
+                transform: scale(1)
 
         .card
             &__info
-                margin-bottom: 50px
+                margin-bottom: 150px
 
                 &-item
                     margin-bottom: 40px
@@ -42,13 +60,41 @@
                     line-height: 130%
 
             &__special
-                font-size: 32px
-                line-height: 130%
-                text-decoration: underline
+                position: absolute
+                top: 500px
+                left: 15%
+                padding: 30px
+                text-align: left
+                transition: all 0.5s ease-in-out
+                z-index: 1000
+
+                h4
+                    margin-bottom: 20px
+                    font-size: 32px
+                    line-height: 130%
+                    text-decoration: underline
+
+                .special__list
+                    margin: 0
+                    width: 0
+                    height: 0
+                    overflow: hidden
+                    transition: all 0.5s ease-in-out
+
 
                 &:hover
-                    text-decoration: none
-                    cursor: pointer
+                    background-color: $white
+                    border-radius: 20px
+                    box-shadow: $shadow-main
+
+                    h4
+                        text-decoration: none
+                        cursor: pointer
+
+                    .special__list
+                        height: 360px
+                        width: 400px
+
 
             &__bottom
                 padding: 40px 0
