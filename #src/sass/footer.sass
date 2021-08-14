@@ -17,14 +17,24 @@
         img
             width: 313px
             height: auto
+            @media screen and (max-width: $desktopS)
+                width: 248px
+
+    &__copyright
+        @media screen and (max-width: $desktopS)
+            font-size: 18px
 
     &__right
         display: flex
         font-size: 32px
         line-height: 130%
+        @media screen and (max-width: $desktopS)
+            font-size: 24px
 
         h3
             color: $white
+            @media screen and (max-width: $desktopS)
+                font-size: 30px
 
     &__location
         margin-right: 98px
@@ -47,6 +57,8 @@
             li
                 a
                     font-size: 32px
+                    @media screen and (max-width: $desktopS)
+                        font-size: 24px
 
         .contacts__inst
             a

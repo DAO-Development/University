@@ -8,6 +8,13 @@
             width: 70px
             height: 140px
             background-size: cover
+            @media screen and (max-width: $desktopS)
+                width: 40px
+                height: 80px
+                &-prev
+                    left: -90px
+                &-next
+                    right: -90px
 
             &-prev
                 left: -170px
@@ -23,18 +30,30 @@
         background-color: $white
         border-radius: 20px
         color: $blue
+        @media screen and (max-width: $desktopS)
+            padding: 30px
+            max-width: 347px
 
         h4
             margin-bottom: 10px
 
         .card
             &__image
+                display: grid
+                place-content: center
                 margin-bottom: 20px
-                width: 390px
-                height: 594px
+                width: 100%
+                height: 592px
                 overflow: hidden
                 border-radius: 20px
+                @media screen and (max-width: $desktopS)
+                    height: 402px
 
                 img
                     width: 100%
                     height: auto
+
+            &__post
+                @media screen and (max-width: $desktopS)
+                    font-size: 18px
+

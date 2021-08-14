@@ -6,13 +6,21 @@
         grid-template-columns: 1fr 1fr
         grid-column-gap: 122px
         grid-row-gap: 87px
+        @media screen and (max-width: $desktopS)
+            grid-column-gap: 99px
+            grid-row-gap: 60px
 
     &-item
         padding-right: 30px
         padding-bottom: 20px
+        @media screen and (max-width: $desktopS)
+            padding-bottom: 0
 
         &:nth-child(2n-1)
             border-right: 2px solid $blue
+            @media screen and (max-width: $desktopS)
+                padding-right: 70px
+
 
         &__number
             display: flex
@@ -27,9 +35,13 @@
             color: $white
             background-color: $blue
             border-radius: 50%
+            @media screen and (max-width: $desktopS)
+                margin-bottom: 30px
 
         h3
             margin-bottom: 30px
+            @media screen and (max-width: $desktopS)
+                margin-bottom: 10px
 
         &--disabled
             border-right: none !important
@@ -40,11 +52,20 @@
         &__text
             font-size: 32px
             line-height: 130%
+            @media screen and (max-width: $desktopS)
+                font-size: 26px
 
     &__card
+        align-self: center
         margin-left: -122px
         max-height: 240px
         padding: 65px 100px
         background: $white
         box-shadow: $shadow-main
         border-radius: 20px
+        @media screen and (max-width: $desktopS)
+            margin-left: -99px
+            padding: 30px 70px
+            max-height: 150px
+            h3
+                font-size: 36px

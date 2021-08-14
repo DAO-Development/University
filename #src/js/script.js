@@ -76,23 +76,23 @@ $(document).ready(function () {
         prevArrow: '<div class="arrow-prev arrow"></div>',
         nextArrow: '<div class="arrow-next arrow"></div>',
         infinite: false,
-        responsive: [
-            {
-                breakpoint: 1441,
-                settings: {
-                    slidesToShow: 3
-                }
-            },
-            {
-                breakpoint: 480,
-                settings: {
-                    arrows: false,
-                    centerMode: true,
-                    centerPadding: '40px',
-                    slidesToShow: 1
-                }
-            }
-        ]
+        // responsive: [
+        //     {
+        //         breakpoint: 1441,
+        //         settings: {
+        //             slidesToShow: 3
+        //         }
+        //     },
+        //     {
+        //         breakpoint: 480,
+        //         settings: {
+        //             arrows: false,
+        //             centerMode: true,
+        //             centerPadding: '40px',
+        //             slidesToShow: 1
+        //         }
+        //     }
+        // ]
     })
 
     /**

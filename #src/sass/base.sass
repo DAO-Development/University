@@ -32,16 +32,18 @@ body
     width: 1480px
     margin: 0 auto
     @media screen and (max-width: $desktopS)
-        width: 1240px
+        width: 1140px
     @media screen and (max-width: $tabletM)
         width: 90vw
     @media screen and (max-width: $mobileL)
         width: 100vw
 
 .container-slider
-    width: 88%
-    margin: 0 !important
-    margin-left: 220px !important
+    width: 90% !important
+    margin: 0
+    margin-left: 220px
+    @media screen and (max-width: $desktopS)
+        margin-left: 150px
 
 div
     box-sizing: border-box
@@ -98,6 +100,7 @@ h3
     font-size: 48px
     color: $blue
     @media screen and (max-width: $desktopS)
+        margin-bottom: 40px
         font-size: 40px
 
 h4
@@ -105,7 +108,7 @@ h4
     font-size: 32px
     @media screen and (max-width: $desktopS)
         margin-bottom: 20px
-        font-size: 28px
+        font-size: 26px
 
 p
     margin: 0

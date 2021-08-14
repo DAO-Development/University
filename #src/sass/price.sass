@@ -2,7 +2,7 @@
 
 .price
     &-slider
-        .slick-list
+        & .slick-list
             overflow: visible !important
 
         & .arrow
@@ -11,6 +11,13 @@
             width: 70px
             height: 140px
             background-size: cover
+            @media screen and (max-width: $desktopS)
+                width: 40px
+                height: 80px
+                &-prev
+                    right: -90px
+                &-next
+                    left: -90px
 
             &-prev
                 right: -170px
@@ -31,6 +38,9 @@
         text-align: center
         color: $blue
         transition: 0.3s ease-in-out
+        @media screen and (max-width: $desktopS)
+            padding: 60px 26px 30px
+            max-width: 347px
 
         &:hover
             .btn
@@ -43,6 +53,8 @@
         .card
             &__info
                 margin-bottom: 150px
+                @media screen and (max-width: $desktopS)
+                    margin-bottom: 104px
 
                 &-item
                     margin-bottom: 40px
@@ -53,6 +65,8 @@
                 &-text
                     font-size: 32px
                     line-height: 130%
+                    @media screen and (max-width: $desktopS)
+                        font-size: 26px
 
             &__special
                 position: absolute
@@ -61,12 +75,12 @@
                 padding: 30px
                 text-align: left
                 transition: all 0.5s ease-in-out
-                z-index: 1000
+                z-index: 500
+                @media screen and (max-width: $desktopS)
+                    top: 448px
 
                 h4
                     margin-bottom: 20px
-                    font-size: 32px
-                    line-height: 130%
                     text-decoration: underline
 
                 .special__list
@@ -81,14 +95,17 @@
                     background-color: $white
                     border-radius: 20px
                     box-shadow: $shadow-main
+                    z-index: 600
 
                     h4
                         text-decoration: none
                         cursor: pointer
 
                     .special__list
-                        height: 360px
+                        height: auto
                         width: 400px
+                        @media screen and (max-width: $desktopS)
+                            width: 360px
 
 
             &__bottom
@@ -110,3 +127,5 @@
             padding: 17px 50px
             font-size: 32px
             line-height: 130%
+            @media screen and (max-width: $desktopS)
+                font-size: 26px
