@@ -1,5 +1,7 @@
 $(document).ready(function () {
-
+    if ($(window).width() <= '1024') {
+        $('.container-slider').removeClass('container-slider')
+    }
     /**
      *  Фиксация header
      */
@@ -24,23 +26,37 @@ $(document).ready(function () {
     /**
      * Меню на мобильных
      */
-    // if ($(window).width() <= '768') {
-    //     $('.header__menu').addClass('sidenav')
-    // }
-    // $('.header__mobile').on('click', function () {
-    //     if ($(this).hasClass('change')) {
-    //         $('.header__mobile').removeClass('change')
-    //         $('.header__menu').removeClass('width')
-    //     } else {
-    //         $('.header__mobile').addClass('change')
-    //         $('.header__menu').addClass('width')
-    //     }
-    // })
-    //
-    // $('.menu__link').on('click', function(){
-    //     $('.header__mobile').removeClass('change')
-    //     $('.header__menu').removeClass('width')
-    // })
+    if ($(window).width() <= '1024') {
+        $('.header__menu').addClass('sidenav')
+    }
+    $('.header__burger-menu').on('click', function () {
+        if ($(this).hasClass('change')) {
+            $('.header__burger-menu').removeClass('change')
+            $('.header__menu').removeClass('width')
+            $('.pop-up__wall').removeClass('active')
+        } else {
+            $('.header__burger-menu').addClass('change')
+            $('.header__menu').addClass('width')
+            $('.pop-up__wall').addClass('active')
+        }
+    })
+
+    $('.menu__link').on('click', function(){
+        $('.header__mobile').removeClass('change')
+        $('.header__menu').removeClass('width')
+    })
+
+    /**
+     * Определение слайдера преимуществ
+     */
+    if ($(window).width() <= '1024') {
+        $('.benefits__list-slider').slick({
+            slidesToShow: 1,
+            dots: true,
+            arrows: false,
+            infinite: false
+        })
+    }
 
     /**
      * Определение слайдера выпускников

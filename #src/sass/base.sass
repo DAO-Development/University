@@ -34,7 +34,7 @@ body
     @media screen and (max-width: $desktopS)
         width: 1140px
     @media screen and (max-width: $tabletM)
-        width: 90vw
+        width: 85vw
     @media screen and (max-width: $mobileL)
         width: 100vw
 
@@ -44,6 +44,7 @@ body
     margin-left: 220px
     @media screen and (max-width: $desktopS)
         margin-left: 150px
+
 
 div
     box-sizing: border-box
@@ -146,3 +147,26 @@ button, .btn
 .yellow-btn
     color: $blue
     background-color: $yellow
+
+.slick-dots
+    li
+        & > button
+            background-color: $blue
+            opacity: 0.5
+
+            &:before
+                content: ""
+
+        &.slick-active
+            & > button
+                opacity: 1
+
+.logo
+    display: block
+    @media screen and (max-width: $tabletM)
+        display: none
+
+    &-short
+        display: none
+        @media screen and (max-width: $tabletM)
+            display: block

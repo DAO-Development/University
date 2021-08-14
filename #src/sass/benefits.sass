@@ -22,7 +22,8 @@
             width: 100vw
 
     &__list
-        &-desktop
+        &-desktop,
+        &--slide ul
             display: flex
             flex-direction: column
             flex-wrap: wrap
@@ -36,6 +37,7 @@
                 font-size: 26px
                 max-height: 570px
 
+        &-desktop
             li
                 max-width: 610px
                 padding-inline-start: 30px
@@ -44,3 +46,14 @@
 
             @media screen and (max-width: $tabletM)
                 display: none
+
+        &-mobile
+            display: none
+            @media screen and (max-width: $tabletM)
+                display: block
+
+        &--slide
+            ul
+                li
+                    padding-inline-start: 30px
+                    font-size: 32px
