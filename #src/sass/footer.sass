@@ -13,6 +13,8 @@
         display: flex
         flex-direction: column
         justify-content: space-between
+        @media screen and (max-width: $tabletS)
+            margin-right: 37px
 
         img
             width: 313px
@@ -21,6 +23,8 @@
                 width: 248px
             @media screen and (max-width: $tabletM)
                 width: 102px
+            @media screen and (max-width: $tabletS)
+                width: 90px
 
     &__copyright
         @media screen and (max-width: $desktopS)
@@ -40,18 +44,30 @@
             color: $white
             @media screen and (max-width: $desktopS)
                 font-size: 30px
+            @media screen and (max-width: $tabletS)
+                font-size: 24px
+                margin-bottom: 30px
 
     &__location
         margin-right: 98px
+        @media screen and (max-width: $tabletS)
+            margin-right: 70px
+            margin-bottom: -20px
+            font-size: 18px
 
         .location
             &-address
                 margin-bottom: 40px
+                @media screen and (max-width: $tabletS)
+                    margin-bottom: 20px
 
                 &__title
                     text-decoration: underline
 
     &__contacts
+        @media screen and (max-width: $tabletS)
+            margin-bottom: -20px
+
         ul
             list-style: none
             display: flex
@@ -64,6 +80,8 @@
                     font-size: 32px
                     @media screen and (max-width: $desktopS)
                         font-size: 24px
+                    @media screen and (max-width: $tabletS)
+                        font-size: 18px
 
         .contacts__inst
             a

@@ -50,6 +50,9 @@
             margin: 0
             padding: 60px 40px 40px
             max-width: 407px
+        @media screen and (max-width: $tabletS)
+            padding: 40px 30px 30px
+            max-width: 310px
 
         &:hover
             .btn
@@ -97,6 +100,9 @@
                     padding: 22px 44px
                     border: 2px solid $blue
                     border-radius: 20px
+                @media screen and (max-width: $tabletS)
+                    top: 436px
+                    left: 10%
 
                 h4
                     margin-bottom: 20px
@@ -148,6 +154,8 @@
                 &-price
                     font-size: 64px
                     line-height: 120%
+                    @media screen and (max-width: $tabletS)
+                        font-size: 48px
 
         .btn
             padding: 17px 50px
@@ -155,3 +163,6 @@
             line-height: 130%
             @media screen and (max-width: $desktopS)
                 font-size: 26px
+            @media screen and (max-width: $tabletS)
+                padding: 24px 48px
+                font-size: 24px

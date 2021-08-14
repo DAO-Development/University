@@ -27,6 +27,8 @@
             background-color: $blue
             @media screen and (max-width: $desktopS)
                 padding: 50px 70px
+            @media screen and (max-width: $tabletS)
+                padding: 40px 60px
 
             h3
                 color: $white
@@ -35,6 +37,12 @@
             &--btn
                 transform: rotate(90deg)
                 transition: 0.3s ease-in-out
+                @media screen and (max-width: $tabletS)
+                    width: 55px
+                    height: 55px
+                    img
+                        width: 100%
+                        height: auto
 
         &__list
             padding: 60px 123px 70px
@@ -45,6 +53,9 @@
             transition: all 0.5s ease-in-out
             @media screen and (max-width: $desktopS)
                 font-size: 26px
+            @media screen and (max-width: $tabletS)
+                padding: 40px 60px 60px
+                font-size: 22px
 
             ol
                 margin: 0
@@ -55,3 +66,7 @@
         @media screen and (max-width: $desktopS)
             padding: 37px 95px
             font-size: 40px
+        @media screen and (max-width: $tabletS)
+            padding: 30px 100px
+            font-size: 36px
+

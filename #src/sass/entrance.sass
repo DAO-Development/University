@@ -11,6 +11,8 @@
             grid-row-gap: 60px
         @media screen and (max-width: $tabletM)
             grid-column-gap: 10px
+        @media screen and (max-width: $tabletM)
+            grid-column-gap: 30px
 
     &-item
         padding-right: 30px
@@ -20,6 +22,8 @@
         @media screen and (max-width: $tabletM)
             padding: 0
             min-width: 452px
+        @media screen and (max-width: $tabletS)
+            min-width: 308px
 
         &:nth-child(2n-1)
             border-right: 2px solid $blue
@@ -81,3 +85,8 @@
             margin-left: 0
             padding: 38px 44px
             max-height: 220px
+        @media screen and (max-width: $tabletS)
+            padding: 23px 28px
+            max-height: 100px
+            h3
+                font-size: 22px

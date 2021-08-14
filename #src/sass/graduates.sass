@@ -40,6 +40,10 @@
                         height: 143px
                         border-radius: 50%
                         overflow: hidden
+                    @media screen and (max-width: $tabletS)
+                        width: 100px
+                        min-width: 100px
+                        height: 100px
 
                     img
                         width: 100%
@@ -53,6 +57,8 @@
                 @media screen and (max-width: $desktopS)
                     margin-bottom: 20px
                     font-size: 18px
+                @media screen and (max-width: $tabletS)
+                    font-size: 14px
 
             &__info
                 display: flex
@@ -64,6 +70,8 @@
                     max-width: 185px
                     gap: 10px
                     font-size: 16px
+                @media screen and (max-width: $tabletS)
+                    font-size: 12px
 
         .arrow
             z-index: 30
