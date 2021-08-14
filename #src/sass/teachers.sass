@@ -24,6 +24,9 @@
                 right: -170px
                 background-image: url("../img/next-arrow-big.png")
 
+        .slick-dots
+            bottom: -60px
+
     &__card
         padding: 35px 35px 40px
         max-width: 460px
@@ -33,9 +36,14 @@
         @media screen and (max-width: $desktopS)
             padding: 30px
             max-width: 347px
+        @media screen and (max-width: $tabletM)
+            padding: 20px 20px 30px
+            width: 255px
 
         h4
             margin-bottom: 10px
+            @media screen and (max-width: $tabletM)
+                font-size: 24px
 
         .card
             &__image
@@ -48,6 +56,8 @@
                 border-radius: 20px
                 @media screen and (max-width: $desktopS)
                     height: 402px
+                @media screen and (max-width: $tabletM)
+                    height: 296px
 
                 img
                     width: 100%
@@ -56,4 +66,6 @@
             &__post
                 @media screen and (max-width: $desktopS)
                     font-size: 18px
+                @media screen and (max-width: $tabletM)
+                    font-size: 16px
 

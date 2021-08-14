@@ -1,13 +1,29 @@
 @import "base"
 
 .specialities
+    //.container
+    //    @media screen and (max-width: $tabletM)
+    //        width: fit-content
+    //        overflow-x: visible
+
     &__content
         display: grid
         grid-template-columns: 1fr 1fr
         grid-gap: 30px
-        margin-bottom: 70px
+        margin: 0 auto 70px
+        width: 1480px
         @media screen and (max-width: $desktopS)
             grid-gap: 50px
+            width: 1140px
+        @media screen and (max-width: $tabletM)
+            width: 100vw
+            padding: 0 80px
+            overflow-x: scroll
+            -ms-overflow-style: none
+            &::-webkit-scrollbar
+                width: 0
+            &::-moz-scrollbar
+                display: none
 
     &__card
         position: relative
@@ -18,6 +34,8 @@
         color: $blue
         @media screen and (max-width: $desktopS)
             padding: 50px
+        @media screen and (max-width: $tabletM)
+            min-width: 559px
 
         h3
             margin-bottom: 30px
@@ -35,8 +53,11 @@
 
         &-with-more
             padding-bottom: 120px
+            @media screen and (max-width: $tabletM)
+                padding-bottom: 140px
 
             ul
+                padding-left: 45px
                 max-height: 532px
                 overflow: hidden
                 transition: all 0.5s ease-in-out
@@ -57,6 +78,15 @@
             &:hover
                 text-decoration: none
                 cursor: pointer
+
+            @media screen and (max-width: $tabletM)
+                display: block
+                padding: 32px 65px
+                border: 1px solid $blue
+                border-radius: 20px
+                text-decoration: none
+                & > span
+                    display: none
 
     &__ask
         position: relative

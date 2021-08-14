@@ -27,6 +27,11 @@
                 left: -170px
                 background-image: url("../img/prev-arrow-big.png")
 
+    &__content
+        @media screen and (max-width: $tabletM)
+            display: grid
+            grid-template-columns: 1fr 1fr
+            grid-row-gap: 40px
 
     &__card
         position: relative
@@ -41,6 +46,10 @@
         @media screen and (max-width: $desktopS)
             padding: 60px 26px 30px
             max-width: 347px
+        @media screen and (max-width: $tabletM)
+            margin: 0
+            padding: 60px 40px 40px
+            max-width: 407px
 
         &:hover
             .btn
@@ -55,6 +64,8 @@
                 margin-bottom: 150px
                 @media screen and (max-width: $desktopS)
                     margin-bottom: 104px
+                @media screen and (max-width: $tabletM)
+                    margin-bottom: 150px
 
                 &-item
                     margin-bottom: 40px
@@ -67,6 +78,8 @@
                     line-height: 130%
                     @media screen and (max-width: $desktopS)
                         font-size: 26px
+                    @media screen and (max-width: $tabletS)
+                        font-size: 22px
 
             &__special
                 position: absolute
@@ -78,10 +91,19 @@
                 z-index: 500
                 @media screen and (max-width: $desktopS)
                     top: 448px
+                @media screen and (max-width: $tabletM)
+                    top: 468px
+                    display: inline-block
+                    padding: 22px 44px
+                    border: 2px solid $blue
+                    border-radius: 20px
 
                 h4
                     margin-bottom: 20px
                     text-decoration: underline
+                    @media screen and (max-width: $tabletM)
+                        text-decoration: none
+                        margin-bottom: 0
 
                 .special__list
                     margin: 0
@@ -100,12 +122,16 @@
                     h4
                         text-decoration: none
                         cursor: pointer
+                        @media screen and (max-width: $tabletM)
+                            margin-bottom: 20px
 
                     .special__list
                         height: auto
                         width: 400px
                         @media screen and (max-width: $desktopS)
                             width: 360px
+                        @media screen and (max-width: $tabletM)
+                            width: 300px
 
 
             &__bottom

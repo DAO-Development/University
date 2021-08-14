@@ -9,17 +9,25 @@
         @media screen and (max-width: $desktopS)
             grid-column-gap: 99px
             grid-row-gap: 60px
+        @media screen and (max-width: $tabletM)
+            grid-column-gap: 10px
 
     &-item
         padding-right: 30px
         padding-bottom: 20px
         @media screen and (max-width: $desktopS)
             padding-bottom: 0
+        @media screen and (max-width: $tabletM)
+            padding: 0
+            min-width: 452px
 
         &:nth-child(2n-1)
             border-right: 2px solid $blue
             @media screen and (max-width: $desktopS)
                 padding-right: 70px
+            @media screen and (max-width: $tabletM)
+                padding: 0
+                border: none
 
 
         &__number
@@ -69,3 +77,7 @@
             max-height: 150px
             h3
                 font-size: 36px
+        @media screen and (max-width: $tabletM)
+            margin-left: 0
+            padding: 38px 44px
+            max-height: 220px

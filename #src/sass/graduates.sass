@@ -1,28 +1,49 @@
 @import "base"
 
 .graduates
-
     &__content
         position: relative
         padding: 102px 0
 
         @media screen and (max-width: $desktopS)
             padding: 90px 0
+        @media screen and (max-width: $tabletM)
+            padding: 0
 
     &__review-slider
         z-index: 15
         max-width: 55%
         @media screen and (max-width: $desktopS)
             max-width: 60%
+        @media screen and (max-width: $tabletM)
+            max-width: 100%
 
         .review
             &__card
+                display: flex
                 padding: 55px 122px
                 background: $white
                 box-shadow: $shadow
                 border-radius: 20px
                 @media screen and (max-width: $desktopS)
                     padding: 66px 99px
+                @media screen and (max-width: $tabletM)
+                    padding: 50px
+
+                &--left
+                    display: none
+                    @media screen and (max-width: $tabletM)
+                        display: block
+                        margin-right: 40px
+                        width: 143px
+                        min-width: 143px
+                        height: 143px
+                        border-radius: 50%
+                        overflow: hidden
+
+                    img
+                        width: 100%
+                        height: auto
 
                 h4
                     color: $blue
@@ -67,6 +88,8 @@
                 &.slick-disabled
                     background-image: url("../img/next-arrow.png")
 
+        .slick-dots
+            bottom: -65px
 
     &__photos-slider
         z-index: 10
@@ -74,6 +97,8 @@
         top: 0
         right: 0
         max-width: 50%
+        @media screen and (max-width: $tabletM)
+            display: none
 
         & .slick-track
             display: flex

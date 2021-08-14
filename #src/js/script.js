@@ -41,7 +41,7 @@ $(document).ready(function () {
         }
     })
 
-    $('.menu__link').on('click', function(){
+    $('.menu__link').on('click', function () {
         $('.header__mobile').removeClass('change')
         $('.header__menu').removeClass('width')
     })
@@ -78,38 +78,32 @@ $(document).ready(function () {
         prevArrow: '<div class="arrow-prev arrow"></div>',
         nextArrow: '<div class="arrow-next arrow"></div>',
         centerMode: false,
-        infinite: false
+        infinite: false,
+        responsive: [
+            {
+                breakpoint: 1025,
+                settings: {
+                    arrows: false,
+                    dots: true
+                }
+            }
+        ]
     });
 
     /**
      * Определение слайдера цен
      */
-    $('.price-slider').slick({
-        variableWidth: false,
-        variableHeight: false,
-        slidesToShow: 3,
-        arrows: true,
-        prevArrow: '<div class="arrow-prev arrow"></div>',
-        nextArrow: '<div class="arrow-next arrow"></div>',
-        infinite: false,
-        // responsive: [
-        //     {
-        //         breakpoint: 1441,
-        //         settings: {
-        //             slidesToShow: 3
-        //         }
-        //     },
-        //     {
-        //         breakpoint: 480,
-        //         settings: {
-        //             arrows: false,
-        //             centerMode: true,
-        //             centerPadding: '40px',
-        //             slidesToShow: 1
-        //         }
-        //     }
-        // ]
-    })
+    if ($(window).width() > '1024') {
+        $('.price-slider').slick({
+            variableWidth: false,
+            variableHeight: false,
+            slidesToShow: 3,
+            arrows: true,
+            prevArrow: '<div class="arrow-prev arrow"></div>',
+            nextArrow: '<div class="arrow-next arrow"></div>',
+            infinite: false
+        })
+    }
 
     /**
      * Определение слайдера преподавателей
@@ -119,7 +113,16 @@ $(document).ready(function () {
         arrows: true,
         prevArrow: '<div class="arrow-prev arrow"></div>',
         nextArrow: '<div class="arrow-next arrow"></div>',
-        infinite: false
+        infinite: false,
+        responsive: [
+            {
+                breakpoint: 1025,
+                settings: {
+                    arrows: false,
+                    dots: true
+                }
+            }
+        ]
     })
 
     /**
