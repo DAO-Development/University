@@ -29,20 +29,39 @@
             display: flex
             flex-direction: column
             flex-wrap: wrap
-            gap: 40px 60px
-            max-height: 650px
+            gap: 30px 60px
+            max-height: 620px
             font-size: 32px
             line-height: 130%
             color: $white
-            list-style-image: url("../img/yellow-list.png")
+            list-style: none
+
             @media (max-width: $desktopS)
                 font-size: 26px
                 max-height: 570px
 
+            li
+                display: flex
+                align-items: baseline
+
+                &:before
+                    display: block
+                    content: ""
+                    margin-right: 30px
+                    width: 30px
+                    min-width: 30px
+                    height: 30px
+                    background-size: cover
+                    background-image: url("../img/yellow-list.png")
+                    @media screen and (max-width: $tabletS)
+                        margin-right: 20px
+                        width: 25px
+                        min-width: 25px
+                        height: 25px
+
         &-desktop
             li
                 max-width: 610px
-                padding-inline-start: 30px
                 @media (max-width: $desktopS)
                     max-width: 515px
 
@@ -56,6 +75,7 @@
 
         &--slide
             ul
+                gap: 40px
+
                 li
-                    padding-inline-start: 30px
                     font-size: 32px

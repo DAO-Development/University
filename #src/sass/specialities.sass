@@ -38,13 +38,31 @@
             margin-bottom: 30px
 
         ul
-            list-style-image: url("../img/blue-list.png")
+            list-style: none
+            padding-left: 0
 
             li
-                padding-inline-start: 20px
+                display: flex
+                align-items: baseline
                 font-size: 32px
                 line-height: 150%
                 margin-bottom: 20px
+
+                &:before
+                    display: block
+                    content: ""
+                    margin-right: 30px
+                    width: 30px
+                    min-width: 30px
+                    height: 30px
+                    background-size: cover
+                    background-image: url("../img/blue-list.png")
+                    @media screen and (max-width: $tabletS)
+                        margin-right: 20px
+                        width: 24px
+                        min-width: 24px
+                        height: 24px
+
                 @media screen and (max-width: $desktopS)
                     font-size: 28px
                 @media screen and (max-width: $tabletS)
@@ -56,7 +74,7 @@
                 padding-bottom: 140px
 
             ul
-                padding-left: 45px
+                //padding-left: 45px
                 max-height: 532px
                 overflow: hidden
                 transition: all 0.5s ease-in-out
