@@ -1,13 +1,6 @@
 @import "base"
 
 .pop-up
-    &__title
-        & .title__line
-            width: 290px
-            margin: 0 auto
-            @media screen and (max-width: $tabletS)
-                width: 190px
-
     &__card
         display: none
         opacity: 0
@@ -18,30 +11,56 @@
             opacity: 1
 
         z-index: 1000
-        width: 1200px
-        height: 700px
-        padding: 30px
-        background-color: white
-        box-shadow: 0 10px 20px $black-opacity
+        width: 900px
+        height: 800px
+        padding: 50px
+        background-color: $white
+        box-shadow: $shadow-main
         border-radius: 20px
-        left: 26vw
-        top: 255px
-        @media screen and (max-width: $tabletM)
-            width: 89vw
-            max-height: 534px
-            padding: 24px
-            top: 80px
-            left: 5.5vw
+        @media screen and (max-width: $desktopS)
+            width: 800px
+            height: 700px
         @media screen and (max-width: $tabletS)
-            width: 85vw
-            max-height: 633px
-            left: 7.5vw
-            top: 125px
+            width: 750px
+            height: 700px
         @media screen and (max-width: $mobileL)
-            max-height: 80vh
-            overflow-y: scroll
+            width: 550px
+            height: 750px
         @media screen and (max-width: $mobileM)
-            padding: 16px
+            padding: 30px
+            width: 400px
+            height: 600px
+        @media screen and (max-width: $mobileS)
+            width: 350px
+            height: 540px
+
+        h2
+            margin-bottom: 20px
+            font-size: 64px
+            text-align: center
+            color: $blue
+            @media screen and (max-width: $desktopS)
+                margin-bottom: 10px
+                font-size: 54px
+            @media screen and (max-width: $mobileL)
+                font-size: 48px
+            @media screen and (max-width: $mobileM)
+                font-size: 36px
+            @media screen and (max-width: $mobileS)
+                font-size: 30px
+
+    &__description
+        margin-bottom: 80px
+        color: rgba(144, 144, 144, 1)
+        font-size: 24px
+        text-align: center
+        @media screen and (max-width: $desktopS)
+            margin-bottom: 50px
+        @media screen and (max-width: $mobileM)
+            margin-bottom: 30px
+            font-size: 18px
+        @media screen and (max-width: $mobileS)
+            font-size: 14px
 
     &__close-btn
         z-index: 1100
@@ -58,14 +77,38 @@
 
     &__form
 
-        & .btn
-            padding: 20px 40px
-            font-size: 20px
-            line-height: 22px
+        input
+            display: block
+            margin-bottom: 50px
+            padding: 29px 50px
+            max-width: 85%
+            border: 2px solid $blue
+            border-radius: 20px
+            font-size: 32px
+            color: $black
             @media screen and (max-width: $tabletS)
-                padding: 10px 20px
-                font-size: 16px
-                line-height: 18px
+                margin-bottom: 40px
+            @media screen and (max-width: $mobileM)
+                max-width: 77%
+                margin-bottom: 30px
+                padding: 25px 40px
+                font-size: 24px
+            @media screen and (max-width: $mobileS)
+                padding: 20px 30px
+
+            &::placeholder
+                color: $blue
+
+            &:focus-visible
+                border: none
+
+            &.btn
+                max-width: 100%
+                margin: 0 auto
+                padding: 30px 85px
+                color: $white
+                @media screen and (max-width: $mobileM)
+                    padding: 20px 70px
 
     &__wall
         z-index: 700
@@ -74,10 +117,7 @@
         left: 0
         width: 100vw
         height: 100vh
-        background-color: $black
-        opacity: 0.5
-        backdrop-filter: blur(15px)
-        -webkit-backdrop-filter: blur(15px)
+        background-color: $black-opacity-dark
 
         display: none
 

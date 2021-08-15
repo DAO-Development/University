@@ -167,13 +167,13 @@ $(document).ready(function () {
     /**
      * Форма для заявки
      */
-    // $('.btn').on("click", function () {
-    //     $('.pop-up__card').addClass('active')
-    //     $('.pop-up__wall').addClass('active')
-    // })
-    //
-    // $('.pop-up__close-btn').on("click", function () {
-    //     $('.pop-up__card').removeClass('active')
-    //     $('.pop-up__wall').removeClass('active')
-    // })
+    $('.btn-open').on("click", function () {
+        $('.pop-up__card').addClass('active')
+        $('.pop-up__wall').addClass('active')
+    })
+
+    $('.pop-up__close-btn').on("click", function () {
+        $('.pop-up__card').removeClass('active')
+        $('.pop-up__wall').removeClass('active')
+    })
 })
