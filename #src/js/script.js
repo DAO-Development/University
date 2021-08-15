@@ -2,26 +2,6 @@ $(document).ready(function () {
     if ($(window).width() <= '1024') {
         $('.container-slider').removeClass('container-slider')
     }
-    /**
-     *  Фиксация header
-     */
-    // window.onscroll = function () {
-    //     myFunction()
-    // };
-    // var header = document.getElementById("header-top");
-    // var sticky = 10;
-    // if (window.screen.width <= '768') {
-    //     header = document.getElementById("header");
-    //     sticky = 0
-    // }
-    //
-    // function myFunction() {
-    //     if (window.pageYOffset >= sticky) {
-    //         header.classList.add("fixed");
-    //     } else {
-    //         header.classList.remove("fixed");
-    //     }
-    // }
 
     /**
      * Меню на мобильных
@@ -124,6 +104,13 @@ $(document).ready(function () {
                     }
                 }
             ]
+        })
+    } else if ($(window).width() <= '360') {
+        $('.teachers-slider').slick({
+            slidesToShow: 1,
+            arrows: false,
+            dots: true,
+            infinite: false,
         })
     } else if ($(window).width() < '768') {
         $('.teachers-slider').slick({
