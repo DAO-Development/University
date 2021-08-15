@@ -20,6 +20,8 @@
                 width: 201px
             @media screen and (max-width: $tabletM)
                 width: 97px
+            @media screen and (max-width: $mobileM)
+                width: 71px
 
     &__menu
         @media screen and (max-width: $tabletM)
@@ -120,6 +122,10 @@
             transition: 0.5s ease-in-out
             @media screen and (max-width: $mobileL)
                 border-width: 2px
+            @media screen and (max-width: $mobileM)
+                width: 50px
+                &:first-child
+                    width: 37.5px
 
             &:first-child
                 width: 45px

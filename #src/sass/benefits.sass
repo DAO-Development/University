@@ -13,6 +13,8 @@
         padding: 60px 0 40px
     @media screen and (max-width: $mobileL)
         padding: 50px 0 60px
+    @media screen and (max-width: $mobileM)
+        padding: 40px 4px
 
     .container
         padding: 60px 50px
@@ -85,8 +87,12 @@
         &--slide
             ul
                 gap: 40px
+                @media screen and (max-width: $mobileM)
+                    gap: 20px
 
                 li
                     font-size: 32px
                     @media screen and (max-width: $tabletS)
                         font-size: 24px
+                    @media screen and (max-width: $mobileM)
+                        font-size: 20px

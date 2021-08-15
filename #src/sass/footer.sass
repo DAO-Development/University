@@ -42,6 +42,9 @@
         line-height: 130%
         @media screen and (max-width: $desktopS)
             font-size: 24px
+        @media screen and (max-width: $mobileM)
+            flex-direction: column
+            gap: 30px
 
         h3
             color: $white
@@ -50,6 +53,8 @@
             @media screen and (max-width: $tabletS)
                 font-size: 24px
                 margin-bottom: 30px
+            @media screen and (max-width: $mobileM)
+                margin-bottom: 20px
 
     &__location
         margin-right: 98px
@@ -60,12 +65,16 @@
         @media screen and (max-width: $mobileL)
             margin-right: 40px
             font-size: 14px
+        @media screen and (max-width: $mobileM)
+            margin-right: 0
 
         .location
             &-address
                 margin-bottom: 40px
                 @media screen and (max-width: $tabletS)
                     margin-bottom: 20px
+                @media screen and (max-width: $mobileM)
+                    margin-bottom: 16px
 
                 &__title
                     text-decoration: underline
@@ -80,6 +89,8 @@
             flex-direction: column
             gap: 20px
             padding-left: 0
+            @media screen and (max-width: $mobileM)
+                gap: 16px
 
             li
                 a
@@ -98,3 +109,6 @@
 
                 svg
                     margin-right: 10px
+                    @media screen and (max-width: $tabletS)
+                        width: 30px
+                        height: 30px
