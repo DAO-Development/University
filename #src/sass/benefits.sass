@@ -5,6 +5,14 @@
     background-image: url("../img/main-bg.png")
     background-position: center
     background-size: cover
+    @media screen and (max-width: $desktopS)
+        padding: 70px 0 100px
+    @media screen and (max-width: $tabletM)
+        padding: 60px 0 100px
+    @media screen and (max-width: $tabletS)
+        padding: 60px 0 40px
+    @media screen and (max-width: $mobileL)
+        padding: 50px 0 60px
 
     .container
         padding: 60px 50px
@@ -21,7 +29,7 @@
         @media screen and (max-width: $tabletS)
             padding: 70px 10px 40px
         @media screen and (max-width: $mobileL)
-            width: 100vw
+            width: 92vw
 
     &__list
         &-desktop,
@@ -30,6 +38,7 @@
             flex-direction: column
             flex-wrap: wrap
             gap: 30px 60px
+            padding-left: 0
             max-height: 620px
             font-size: 32px
             line-height: 130%
@@ -79,3 +88,5 @@
 
                 li
                     font-size: 32px
+                    @media screen and (max-width: $tabletS)
+                        font-size: 24px

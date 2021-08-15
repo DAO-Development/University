@@ -98,6 +98,9 @@
                 padding: 24px 32px
             @media screen and (max-width: $tabletS)
                 padding: 24px 18px
+            @media screen and (max-width: $mobileL)
+                font-size: 14px
+                padding: 15px 28px
 
     &__burger-menu
         display: none
@@ -115,6 +118,8 @@
             border: 3px solid $white
             border-radius: 20px
             transition: 0.5s ease-in-out
+            @media screen and (max-width: $mobileL)
+                border-width: 2px
 
             &:first-child
                 width: 45px

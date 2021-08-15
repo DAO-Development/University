@@ -32,6 +32,11 @@
             display: grid
             grid-template-columns: 1fr 1fr
             grid-row-gap: 40px
+        @media screen and (max-width: $mobileL)
+            display: flex
+            flex-direction: column
+            align-items: center
+            gap: 50px
 
     &__card
         position: relative
@@ -53,6 +58,9 @@
         @media screen and (max-width: $tabletS)
             padding: 40px 30px 30px
             max-width: 310px
+        @media screen and (max-width: $mobileL)
+            padding: 50px 50px 30px
+            max-width: 358px
 
         &:hover
             .btn
@@ -103,6 +111,8 @@
                 @media screen and (max-width: $tabletS)
                     top: 436px
                     left: 10%
+                @media screen and (max-width: $mobileL)
+                    left: 13%
 
                 h4
                     margin-bottom: 20px

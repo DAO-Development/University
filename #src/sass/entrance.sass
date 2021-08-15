@@ -13,6 +13,11 @@
             grid-column-gap: 10px
         @media screen and (max-width: $tabletM)
             grid-column-gap: 30px
+        @media screen and (max-width: $mobileL)
+            display: flex
+            flex-direction: column
+            align-items: center
+            gap: 50px
 
     &-item
         padding-right: 30px
@@ -24,6 +29,11 @@
             min-width: 452px
         @media screen and (max-width: $tabletS)
             min-width: 308px
+        @media screen and (max-width: $mobileL)
+            display: flex
+            flex-direction: column
+            align-items: center
+            text-align: center
 
         &:nth-child(2n-1)
             border-right: 2px solid $blue
@@ -90,3 +100,8 @@
             max-height: 100px
             h3
                 font-size: 22px
+        @media screen and (max-width: $mobileL)
+            padding: 34px 55px
+            max-height: 150px
+            h3
+                font-size: 32px

@@ -29,6 +29,10 @@
                     padding: 66px 99px
                 @media screen and (max-width: $tabletM)
                     padding: 50px
+                @media screen and (max-width: $tabletS)
+                    padding: 40px
+                @media screen and (max-width: $mobileL)
+                    padding: 40px 30px
 
                 &--left
                     display: none
@@ -97,7 +101,9 @@
                     background-image: url("../img/next-arrow.png")
 
         .slick-dots
-            bottom: -65px
+            bottom: -60px
+            @media screen and (max-width: $mobileL)
+                bottom: -40px
 
     &__photos-slider
         z-index: 10

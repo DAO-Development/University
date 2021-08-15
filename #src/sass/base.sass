@@ -37,13 +37,10 @@ body
         width: 1140px
     @media screen and (max-width: $tabletM)
         width: 85vw
-    @media screen and (max-width: $mobileL)
-        width: 100vw
 
 .container-slider
     width: 90% !important
-    margin: 0
-    margin-left: 220px
+    margin: 0 0 0 220px
     @media screen and (max-width: $desktopS)
         margin-left: 150px
 
@@ -57,6 +54,8 @@ section
         padding: 80px 0 100px
     @media screen and (max-width: $tabletS)
         padding: 60px 0 80px
+    @media screen and (max-width: $mobileL)
+        padding: 50px 0 60px
 
 .yellow-sec
     background-color: $yellow
@@ -89,8 +88,11 @@ h1
     @media screen and (max-width: $desktopS)
         font-size: 64px
     @media screen and (max-width: $tabletS)
-        font-size: 52px
         margin-bottom: 50px
+        font-size: 52px
+    @media screen and (max-width: $mobileL)
+        margin-bottom: 40px
+        font-size: 48px
 
 h2
     margin-bottom: 50px
@@ -100,7 +102,7 @@ h2
         font-size: 48px
     @media screen and (max-width: $tabletS)
         margin-bottom: 40px
-        font-size: 44px
+        font-size: 42px
 
 h3, h4, h5, h6
     font-family: "Jost", sans-serif

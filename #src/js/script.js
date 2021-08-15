@@ -108,22 +108,35 @@ $(document).ready(function () {
     /**
      * Определение слайдера преподавателей
      */
-    $('.teachers-slider').slick({
-        slidesToShow: 3,
-        arrows: true,
-        prevArrow: '<div class="arrow-prev arrow"></div>',
-        nextArrow: '<div class="arrow-next arrow"></div>',
-        infinite: false,
-        responsive: [
-            {
-                breakpoint: 1025,
-                settings: {
-                    arrows: false,
-                    dots: true
+    if ($(window).width() >= '768') {
+        $('.teachers-slider').slick({
+            slidesToShow: 3,
+            arrows: true,
+            prevArrow: '<div class="arrow-prev arrow"></div>',
+            nextArrow: '<div class="arrow-next arrow"></div>',
+            infinite: false,
+            responsive: [
+                {
+                    breakpoint: 1025,
+                    settings: {
+                        arrows: false,
+                        dots: true
+                    }
                 }
-            }
-        ]
-    })
+            ]
+        })
+    } else if ($(window).width() < '768') {
+        $('.teachers-slider').slick({
+            centerMode: true,
+            centerPadding: '85px',
+            variableWidth: true,
+            variableHeight: true,
+            slidesToShow: 3,
+            arrows: false,
+            dots: true,
+            infinite: true,
+        })
+    }
 
     /**
      * Кнопка с вопросом

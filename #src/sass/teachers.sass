@@ -27,6 +27,22 @@
         .slick-dots
             bottom: -60px
 
+        & .slick-list
+            padding-top: 50px !important
+            padding-bottom: 50px !important
+
+    &--slide
+        z-index: 100
+        @media screen and (max-width: $mobileL)
+            &.slick-current.slick-center
+                z-index: 200
+                position: relative
+
+                .teachers__card
+                    transform: scale(1.2)
+                    filter: none
+
+
     &__card
         padding: 35px 35px 40px
         max-width: 460px
@@ -42,6 +58,11 @@
         @media screen and (max-width: $tabletS)
             padding: 16px 16px 20px
             width: 196px
+        @media screen and (max-width: $mobileL)
+            padding: 10px
+            width: 250px
+            filter: blur(4px)
+            transition: 0.3s ease-in-out
 
         h4
             margin-bottom: 10px
@@ -49,6 +70,9 @@
                 font-size: 24px
             @media screen and (max-width: $tabletS)
                 font-size: 19px
+            @media screen and (max-width: $mobileL)
+                font-size: 30px
+                text-align: center
 
         .card
             &__image
@@ -63,6 +87,8 @@
                     height: 402px
                 @media screen and (max-width: $tabletM)
                     height: 296px
+                @media screen and (max-width: $mobileL)
+                    height: 241px
 
                 img
                     width: 100%
@@ -70,6 +96,9 @@
                     @media screen and (max-width: $tabletS)
                         height: 296px
                         width: auto
+                    @media screen and (max-width: $mobileL)
+                        height: auto
+                        width: 100%
 
             &__post
                 @media screen and (max-width: $desktopS)
@@ -78,4 +107,7 @@
                     font-size: 16px
                 @media screen and (max-width: $tabletS)
                     font-size: 14px
+                @media screen and (max-width: $mobileL)
+                    font-size: 18px
+                    text-align: center
 
