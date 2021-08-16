@@ -51,6 +51,7 @@ $(document).ready(function () {
         infinite: false
     });
     $('.graduates__review-slider').slick({
+        variableHeight: false,
         slidesToShow: 1,
         slidesToScroll: 1,
         asNavFor: '.graduates__photos-slider',
@@ -168,6 +169,10 @@ $(document).ready(function () {
      * Форма для заявки
      */
     $('.btn-open').on("click", function () {
+        $('.pop-up__card').addClass('active')
+        $('.pop-up__wall').addClass('active')
+    })
+    $('.specialities__ask--text').on("click", function () {
         $('.pop-up__card').addClass('active')
         $('.pop-up__wall').addClass('active')
     })
